@@ -1,1 +1,15 @@
-<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>FlashPlay</title><link rel='manifest' href='manifest.json'><link rel='stylesheet' href='style.css'></head><body><header><h1>⚡ FlashPlay</h1><p>Minijuegos rápidos</p></header><main><div class='card'><h2>Bienvenido</h2><input id='name' placeholder='Tu apodo'><p>🪙 Monedas: <span id='coins'>100</span></p><button onclick='addCoins(20)'>Ganar 20 monedas</button></div><div class='card'><h2>Reflejos</h2><div id='circle'></div><button onclick='startReflex()'>Jugar</button><p id='result'></p></div></main><script src='script.js'></script></body></html>
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FlashPlay V2</title><link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json"></head><body>
+<div id="splash"><div class="bolt">⚡</div><h1>FLASHPLAY</h1><p>Entrando al Arcade...</p></div>
+<canvas id="bg"></canvas>
+<div id="app">
+<header><div class="logoWrap"><div class="logo">⚡</div><div><h2>FlashPlay</h2><small>Arcade Neon</small></div></div><div class="coins">🪙 <span id="coins">100</span></div></header>
+<section class="hero"><div id="zapp">
+<svg viewBox="0 0 200 220" width="160"><circle cx="100" cy="85" r="48" fill="#ffd54f"/><circle cx="82" cy="76" r="7"/><circle cx="118" cy="76" r="7"/><path d="M78 103 Q100 120 122 103" stroke="#111" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M100 130 L80 168 L98 168 L88 210 L122 158 L102 158 Z" fill="#8a5cff"/></svg>
+</div><h1>¡Bienvenido!</h1><p>Zapp te espera con un cofre.</p><button id="play">JUGAR</button></section>
+<section class="card chest"><div>🎁 Cofre diario</div><button id="claim">Abrir</button></section>
+<h3>Máquinas del Arcade</h3><section class="grid">
+<div class="card game">⚡ Reflejos</div><div class="card game">🧠 Memoria</div><div class="card game">🏃 Escape</div><div class="card game">🎯 Tap Rush</div>
+</section></div><script src="script.js"></script></body></html>
