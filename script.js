@@ -1,5 +1,1 @@
-let coins=+localStorage.getItem("coins")||100;const el=document.getElementById("coins");el.textContent=coins;
-setTimeout(()=>{splash.style.display="none";app.style.opacity=1},2200);
-claim.onclick=()=>{coins+=50;localStorage.setItem("coins",coins);el.textContent=coins;alert("¡Zapp te regaló +50 monedas!");};
-play.onclick=()=>alert("V2.1 traerá el primer minijuego real.");
-const c=bg.getContext("2d");let w,h,p=[];function rs(){w=bg.width=innerWidth;h=bg.height=innerHeight;p=[...Array(100)].map(()=>({x:Math.random()*w,y:Math.random()*h,s:Math.random()*1+.3,r:Math.random()*2+1}))}onresize=rs;rs();(function a(){c.fillStyle="#070914";c.fillRect(0,0,w,h);for(const i of p){c.fillStyle="rgba(138,92,255,.8)";c.beginPath();c.arc(i.x,i.y,i.r,0,6.28);c.fill();i.y+=i.s;if(i.y>h)i.y=0;}requestAnimationFrame(a)})();
+let coins=+localStorage.getItem("coins")||100;coinsEl.textContent=coins;const c=bg.getContext("2d");let w,h,p=[];function r(){w=bg.width=innerWidth;h=bg.height=innerHeight;p=[...Array(80)].map(()=>({x:Math.random()*w,y:Math.random()*h,s:Math.random()+.2}))}onresize=r;r();(function a(){c.fillStyle="#070914";c.fillRect(0,0,w,h);c.fillStyle="rgba(138,92,255,.8)";p.forEach(i=>{c.beginPath();c.arc(i.x,i.y,2,0,7);c.fill();i.y+=i.s;if(i.y>h)i.y=0});requestAnimationFrame(a)})();
