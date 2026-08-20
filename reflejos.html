@@ -1,7 +1,11 @@
-<!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><link rel='stylesheet' href='style.css'></head><body><h2>⚡ Reflejos</h2><div>Tiempo: <span id='t'>20</span>s</div><div id='arena'><div id='dot'></div></div><div>Puntos: <span id='p'>0</span></div><button onclick="location.href='index.html'">Volver</button><script>
-let t=20,p=0,d=document.getElementById('dot'),a=document.getElementById('arena');
-function mv(){d.style.left=Math.random()*240+'px';d.style.top=Math.random()*240+'px';}
-d.onclick=()=>{p++;document.getElementById('p').textContent=p;mv();}
+<!DOCTYPE html><html lang=es><head><meta charset=UTF-8><meta name=viewport content='width=device-width,initial-scale=1'><link rel=stylesheet href=style.css></head><body class=game>
+<div class=top><div>⚡ Reflejos</div><div id=t>20</div></div>
+<div id=arena><div id=dot></div></div>
+<h2>Puntos: <span id=p>0</span></h2><button class=play onclick="location.href='index.html'">Volver</button>
+<script>
+let t=20,p=0,d=document.getElementById('dot');
+function mv(){d.style.left=Math.random()*250+'px';d.style.top=Math.random()*250+'px';}
+d.onclick=()=>{p++;document.getElementById('p').textContent=p;mv();};
 mv();
-let i=setInterval(()=>{t--;document.getElementById('t').textContent=t;if(t<=0){clearInterval(i);let c=+localStorage.coins||100;c+=p*10;localStorage.coins=c;alert('Ganaste '+(p*10)+' monedas');location.href='index.html';}},1000);
+let i=setInterval(()=>{t--;document.getElementById('t').textContent=t;if(t<=0){clearInterval(i);let c=+localStorage.coins||100;c+=p*10;localStorage.coins=c;alert('¡Ganaste '+(p*10)+' monedas!');location.href='index.html';}},1000);
 </script></body></html>
